@@ -25,3 +25,45 @@ public class Shuffle_Array {
 }
 
 OUTPUT : [1, 3, 4, 7, 5, 6, 2]
+
+2. Enter a Roman Number as input and convert it to an integer. (Example: IX = 9)
+#CODE
+import java.util.*;
+class Roman_to_integer
+{    
+ public static int Roman_to_integer(String roman) 
+ {
+    Map<Character,Integer> numbersMap = new HashMap<>();
+    numbersMap.put('I',1);
+    numbersMap.put('V',5);
+    numbersMap.put('X',10);
+    numbersMap.put('L',50);
+    numbersMap.put('C',100);   
+    numbersMap.put('D',500);   
+    numbersMap.put('M',1000);  
+    int result=0;
+    
+for(int i=0;i<roman.length();i++)
+    {
+      char ch = roman.charAt(i);
+      if(i>0 && numbersMap.get(ch) > numbersMap.get(roman.charAt(i-1)))
+      {
+        result += numbersMap.get(ch) - 2*numbersMap.get(roman.charAt(i-1));
+      }
+      else
+        result += numbersMap.get(ch);
+    }
+        return result;
+ }
+ public static void main(String args[])
+ {
+   String roman_Number="XII";
+   int result = Roman_to_integer(roman_Number);
+   System.out.println("The roman number you have  entered is: "+roman_Number);
+   System.out.println("Its integer value is: "+result);
+   System.out.println();
+ }
+}
+
+OUTPUT : The roman number you have    entered is: XII
+         Its integer value is: 12
