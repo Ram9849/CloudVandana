@@ -67,3 +67,62 @@ for(int i=0;i<roman.length();i++)
 
 OUTPUT : The roman number you have    entered is: XII
          Its integer value is: 12
+
+
+3.Check if the input is pangram or not. (A pangram is a sentence that contains all the
+alphabets from A to Z)
+
+#CODE
+import java.util.Scanner;
+class Main {
+  public static void main(String[] args) 
+  {
+    Scanner in = new Scanner(System.in);
+    System.out.println("Enter a sentence:");
+    String str= in.nextLine(); 
+    int count[] = new int[26];  //Array to store counts of 26 alphbets
+    boolean flag = true;       
+    char chr;
+    for(int k=0; k<str.length(); k++)
+    {
+        chr = str.charAt(k);
+        if(chr == ' ')
+        continue;
+        /*
+          *check if the character is among 26 alphabets, If so
+          *then increment the count of their respective index position
+          'A'-'A' = 0
+          'B'-'A' = 1
+          'b'-'a' = 1
+          'c'-'a' = 2
+         */
+        if(chr>='A' && chr<='Z')
+        {
+            count[chr-'A']++;      
+        } 
+        else if(chr>='a' && chr<='z')
+        {
+            count[chr-'a']++;      
+        }
+    }
+ 
+     for(int n=0; n<count.length; n++)
+    {
+      if(count[n] == 0)
+      {
+        flag = false;
+        break;
+      }
+    }
+    if(flag)
+      System.out.println("It is a Pangram");
+    else 
+      System.out.println("It is not a Pangram");
+  }
+}
+
+OUTPUT : Enter a sentence : the five boxing wizards jumps quickly
+         It is a Pangram
+
+OUTPUT : Enter a sentence : tI have two legs and hands
+         It is not a Pangram
