@@ -1,0 +1,45 @@
+JAVASCRIPT PROGRAMS
+
+1. Take a sentence as an input and reverse every word in that sentence.
+Example - This is a sunny day > shiT si a ynnus yad.
+#SCRIPT
+
+function reverese_words(string)
+ {
+    return string.split("").reverse().join("").split(" ").reverse().join(" ")
+ }
+console.log(reverse_words('welcome to the cloudvedana.'));
+
+OUTPUT : emoclew ot eht .anadevduolc
+
+2. Perform sorting of an array in descending order.
+#SCRIPT
+
+var array = [50, 30, 90, 100, 80, 20];
+var n = array.length;
+var swapped;
+do {
+  swapped = false;
+  for (var i = 0; i < n - 1; i++) 
+   {
+    if (array[i] < array[i + 1])
+      {
+      // Swap the elements
+      var temp = array[i];
+      array[i] = array[i + 1];
+      array[i + 1] = temp;
+      swapped = true;
+       }
+    }
+ }
+ while (swapped);
+console.log(array);
+
+OUTPUT :  [ 100, 90, 80, 50, 30, 20 ]
+
+
+
+
+
+
+
