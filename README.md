@@ -13,3 +13,6 @@ I am sharing the calculator output here please look here for HTML CSS,JAVASCRIPT
 
 2. OUTPUT FOR SURVEY FORM
    [SURVEY.pdf](https://github.com/Ram9849/CloudVedana/files/12892328/SURVEY.pdf)
+
+   ![5](https://github.com/Ram9849/CloudVedana/assets/77525431/832e0dad-7572-4980-be13-30ee5240b7f9)
+
